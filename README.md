@@ -5,7 +5,7 @@
 ## Description
 
 This project is created by Spring Boot (backend), Angular + bootstrap (frontend) and postgre SQL for data base.
-## Screenshots
+
 ## Screenshots
 <img src="https://imgur.com/NkwP47v.png">
 <img src="https://imgur.com/oygVw2k.png">
