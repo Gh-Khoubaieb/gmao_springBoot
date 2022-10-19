@@ -1,0 +1,145 @@
+
+<div class="col-lg-11 " style="margin-left: 45px" >
+  <div class="mt-5" style="display: flex; justify-content: space-between">
+  <h4 style="font-weight: bold; font-size: 23px; font-family: Arial"> Ajouter un Equipement </h4>
+
+  </div>
+
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Equipement  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Ajouter</p>
+
+  </div>
+  <mat-divider class="mb-4 mt-3" ></mat-divider>
+
+  <form (ngSubmit) = "onSubmit()"  class="example-form ">
+    <div class=" col-lg-12" >
+<mat-card class="m-0 col-lg-12" >
+
+  <div class="">
+    <h4 class="m-auto p-auto" style="font-weight: bold">Ajouter un équipement   </h4>
+    <p style="width: 100%">      Merci de remplir les champs du formualire   </p>
+  </div>
+
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label> Code Equipement  </mat-label>
+        <input matInput placeholder="codeEquipement" id = "codeEquipement"
+               [(ngModel)] = "equipement.codeEquipement" name = "codeEquipement" type="number" required >
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label> Statut  </mat-label>
+        <input matInput placeholder="statut" id = "statut"
+               [(ngModel)] = "equipement.statut" name = "statut" required >
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label>Criticité  </mat-label>
+        <input matInput placeholder="Criticité" id = "criticite"
+               [(ngModel)] = "equipement.criticite" name = "codcriticite" required>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label>Tag Qr </mat-label>
+        <input matInput placeholder="Tag Qr" id = "tagQr"
+               [(ngModel)] = "equipement.tagQr" name = "tagQr" required>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label>Type</mat-label>
+        <input matInput placeholder="Type" id = "type"
+               [(ngModel)] = "equipement.type" name = "type" required>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label>Photo</mat-label>
+        <input matInput placeholder="Photo" id = "photo"
+               [(ngModel)] = "equipement.photo" name = "photo"
+        type="text"
+        required>
+
+      </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-lg-12">
+      <mat-label>Doc Url</mat-label>
+      <input matInput placeholder="Doc Url" id = "docUrl"
+             [(ngModel)] = "equipement.docUrl" name = "docUrl"
+             type="text"
+             required>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-lg-12">
+      <mat-label>No° Serie</mat-label>
+      <input matInput placeholder="No° Serie" id = "noSerie"
+             [(ngModel)] = "equipement.noSerie" name = "noSerie"
+             type="number"
+             required>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-lg-12">
+      <mat-label>Classe</mat-label>
+      <input matInput placeholder="Classe" id = "classe"
+             [(ngModel)] = "equipement.classe" name = "classe"
+             type="text"
+             required>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-lg-12">
+      <mat-label>Bar Code</mat-label>
+      <input matInput placeholder="Bar Code" id = "barCode"
+             [(ngModel)] = "equipement.barCode" name = "barCode"
+             type="text"
+             required>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-lg-12">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Nom" id = "nom"
+             [(ngModel)] = "equipement.nom" name = "nom"
+             type="text"
+             required>
+
+    </mat-form-field>
+
+  <mat-dialog-actions align="start" class="col-lg-12 "  >
+
+    <button class = "btn btn-primary css-1m0olfb " type ="submit">Enregistrer</button>
+    <button  mat-button mat-dialog-close class="css-1m0olfb" (click)="annuler()">
+
+      Annuler
+    </button>
+  </mat-dialog-actions>
+</mat-card>
+</div>
+  </form>
+</div>
+
+
+
+
+<!--
+<h1>Hi {{data.name}}</h1>
+<div>
+  <label id="favorite-animal">What's your favorite animal?</label>
+  <input for="favorite-animal"  placeholder="Enter your name">
+</div>
+<div>
+  <button >OK</button>
+  <button >Cancel</button>
+</div>
+-->

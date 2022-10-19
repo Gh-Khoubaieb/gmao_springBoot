@@ -1,0 +1,24 @@
+p{
+
+  width: 250px;
+}
+
+.container{
+
+
+  flex-wrap: wrap ;
+  flex-direction: row;
+  display: flex;
+}
+
+.full-width-field{
+  width: 100%;
+}
+
+
+mat-form-field {
+  margin-bottom: -0.75em;
+}
+::ng-deep .mat-form-field-wrapper{
+  margin-bottom: -1.25em;
+}

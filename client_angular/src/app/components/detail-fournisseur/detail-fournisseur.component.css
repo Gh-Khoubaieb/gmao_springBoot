@@ -1,0 +1,39 @@
+.demo-table {
+  width: 100%;
+}
+
+.demo-button-container {
+  padding-bottom: 16px;
+}
+
+.demo-button + .demo-button {
+  margin-left: 8px;
+}
+p {
+  margin: 0px 0px 0.35em;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.43;
+}
+strong{
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.39286rem;
+  display: table-cell;
+
+}
+
+table{
+  width: 90%;
+  margin: auto;
+}
+
+th.mat-header-cell {
+  text-align: center !important;
+}
+
+td.mat-cell {
+  text-align: center !important;
+}

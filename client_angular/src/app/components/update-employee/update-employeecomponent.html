@@ -1,0 +1,105 @@
+<div class="ml-5 table2">
+  <div class="mt-3" style="display: flex; justify-content: space-between; height: 35px">
+
+    <h4 class="p-0" style="font-weight: bold; font-size: 23px; font-family: Arial"> Update d'un employé </h4>
+
+  </div>
+
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Employé  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Update</p>
+
+  </div>
+  <mat-divider class="mb-4 mt-3 " style="margin-top: 11px"></mat-divider>
+
+<form (ngSubmit) = "onSubmit()" class="example-form formi">
+  <mat-card class="m-0 col-lg-12" >
+
+    <div class="">
+      <h4 class="m-auto p-auto" style="font-weight: 450"> Mise à jour de l'employé  {{employe.nom}} </h4>
+      <p style="" class="css-14ukpd">     Employé N°: {{employe.id}}  </p>
+    </div>
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label> Nom  </mat-label>
+      <input matInput placeholder="Nom" id = "nom"
+             [(ngModel)] = "employe.nom" name = "nom" required >
+
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label> Prénom  </mat-label>
+      <input matInput placeholder="Prénom" id = "prenom"
+             [(ngModel)] = "employe.prenom" name = "prenom"required >
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label> Adresse  </mat-label>
+      <input matInput placeholder="Adresse" id = "adresse"
+             [(ngModel)] = "employe.adresse" name = "adresse" required >
+
+    </mat-form-field>
+
+
+
+
+
+
+
+
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label>CIN  </mat-label>
+      <input matInput placeholder="CIN" id = "cin"
+             [(ngModel)] = "employe.cin" name = "cin" required>
+
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label>Email </mat-label>
+      <input matInput placeholder="Email" id = "email"
+             [(ngModel)] = "employe.email" name = "email" required>
+
+    </mat-form-field>
+
+
+
+
+
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label>Label</mat-label>
+      <input matInput placeholder="Label" id = "label"
+             [(ngModel)] = "employe.label" name = "label" required>
+
+    </mat-form-field>
+
+
+
+
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label>Telephone</mat-label>
+      <input matInput placeholder="Telephone" id = "telephone"
+             [(ngModel)] = "employe.telephone" name = "telephone"
+             type="number"
+             required>
+
+    </mat-form-field>
+
+
+    <mat-dialog-actions align="start" class="col-lg-12 "  >
+
+      <button class = "btn btn-primary css-1m0olfb" type ="submit">Enregistrer</button>
+      <button mat-button mat-dialog-close class="css-1m0olfb" (click)="annuler()">
+        Annuler</button>
+    </mat-dialog-actions>
+
+  </mat-card>
+</form>
+</div>

@@ -1,0 +1,90 @@
+.fixed-header {
+  position: fixed;
+  z-index:999;
+  height: 50px;
+}
+
+#frugalmap {
+  height: 300px;
+  width: 100%;
+  top: 50px;
+  position: relative;
+}
+
+.mat-elevation-z5 {
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 50px;
+}
+
+
+.css-wqmgs7 {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-align: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: visible;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: inherit;
+  padding: 12px;
+  font-size: 1.625rem;
+}
+.css-l75u4q {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: sticky;
+  z-index: 1100;
+  top: 0px;
+  left: auto;
+  right: 0px;
+  background: rgb(255, 255, 255);
+  color: rgb(158, 158, 158);
+}
+.css-k56pvk {
+  width: 50px;
+  height: 100%;
+
+}
+
+
+.filler ::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  opacity: 0;
+}
+.filler ::ng-deep .read-only-true .mat-form-field-appearance-outline .mat-form-field-outline .mat-form-field-outline-start {
+  border: 1px solid white !important;
+
+}
+
+.filler ::ng-deep .read-only-true .mat-form-field-appearance-outline .mat-form-field-outline .mat-form-field-outline-end {
+  border: 1px solid white;
+}
+
+.filler ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+
+

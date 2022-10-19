@@ -1,0 +1,12 @@
+.table2 {
+  height: 700px;
+  width: 90%;
+  margin: 50px;
+  padding: 50px;
+  background-color: #F7F9FC;
+}
+
+th, td{
+  text-align: center !important;
+}
+

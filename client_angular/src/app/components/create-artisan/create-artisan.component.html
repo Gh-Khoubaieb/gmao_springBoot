@@ -1,0 +1,92 @@
+<div class="col-lg-11 " style="margin-left: 45px">
+  <div class="mt-5" style="display: flex; justify-content: space-between">
+    <h4  style="font-weight: bold; font-size: 23px; font-family: Arial"> Ajouter un artisan </h4>
+
+    <button mat-button mat-dialog-close class="" (click)="annuler()">
+      <mat-icon class="">arrow_back_ios</mat-icon>
+      Retour</button>
+  </div>
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Artisan  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Ajout</p>
+
+  </div>
+  <mat-divider class="mb-4 mt-3"></mat-divider>
+
+  <form (ngSubmit) = "onSubmit()" class="example-form ">
+
+<div class=" col-lg-12">
+
+  <mat-card class="m-0 col-lg-12" >
+    <div class="">
+      <h4 class="m-auto p-auto" style="font-weight: bold">Artisan   </h4>
+      <p>      Formik example with Yup validation   </p>
+    </div>
+
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label> Adresse  </mat-label>
+        <input matInput placeholder="Adresse" id = "adresse"
+               [(ngModel)] = "artisan.adresse" name = "adresse" required >
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label> Nom  </mat-label>
+        <input matInput placeholder="Nom" id = "nom"
+               [(ngModel)] = "artisan.nom" name = "nom"required >
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label>Disponibilité  </mat-label>
+        <input matInput placeholder="Disponibilité" id = "disponibilite"
+               [(ngModel)] = "artisan.disponibilite" name = "disponibilite" required >
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="col-lg-12">
+        <mat-label>Specialité </mat-label>
+        <input matInput placeholder="Specialité" id = "specialite"
+               [(ngModel)] = "artisan.specialite" name = "site" required>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Telephone</mat-label>
+        <input matInput placeholder="Telephone" id = "telephone"
+               [(ngModel)] = "artisan.telephone" name = "telephone"
+        type="number"
+        required>
+
+      </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="description" id = "description"
+             [(ngModel)] = "artisan.description" name = "description"
+
+             required>
+
+    </mat-form-field>
+
+    <mat-dialog-actions align="start" class="col-lg-12 "  style="display: flex; justify-content: space-between">
+
+      <button class = "btn btn-primary m-2" type ="submit">Sauvegarder</button>
+      <button class = "btn  m-2" type ="reset">
+
+        <mat-icon>replay</mat-icon>
+      </button>
+    </mat-dialog-actions>
+  </mat-card>
+</div>
+  </form>
+</div>

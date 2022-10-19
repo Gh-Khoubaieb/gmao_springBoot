@@ -1,0 +1,166 @@
+<div class="col-lg-11 " style="margin-left: 45px">
+
+
+
+  <div class="mt-5" style="display: flex; justify-content: space-between; height: 35px">
+    <h4 class="p-0" style="font-weight: bold; font-size: 23px; font-family: Arial"> Détail de l'Intervention  #{{intervention.id}} </h4>
+
+    <div class="">
+      <mat-icon class="">arrow_back_ios</mat-icon>
+      <a href="#" routerLink="/interventions" class="mb-2 btn " >
+
+        Retour</a>
+    </div>
+  </div>
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Intervention  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Détail</p>
+
+  </div>
+  <mat-divider class="mb-4 " style="margin-top: 11px"></mat-divider>
+
+
+
+  <mat-card class="m-auto" >
+
+    <mat-card-subtitle></mat-card-subtitle>
+    <mat-card-content>
+      <mat-tab-group mat-align-tabs="start" class="mt-3">
+        <mat-tab label="Intervention">
+
+
+      <mat-list >
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Code Intervention:</strong>
+            <p click="col-md-4 ">{{ intervention.codeIntervention }}</p>
+          </div>
+        </mat-list-item>
+
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="mt-3">
+
+
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2"  >description :</strong>
+            <p click="col-md-4 " >{{ intervention.description }}</p>
+          </div>
+
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">priorite:</strong>
+            <p click="col-md-4 ">{{ intervention.priorite }}</p>
+          </div>
+        </mat-list-item>
+
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Date De Debut:</strong>
+            <p click="col-md-4 ">{{ intervention.dateDeDebut | date }}</p>
+          </div>
+        </mat-list-item>
+
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <div class="col-lg-12 col-md-10" style=" display: flex">
+          <strong class="col-md-2">heure:</strong>
+          <p click="col-md-4 ">{{ intervention.heure }}</p>
+        </div>
+      </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Date de fin:</strong>
+            <p click="col-md-4 ">{{ intervention.dateDeFin | date}}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Type:</strong>
+            <p click="col-md-4 ">{{ intervention.type }}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <!--
+              <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Intervention:</strong>
+            <p click="col-md-4 ">{{ interventions.length }}</p>
+          </div>
+        </mat-list-item>
+         -->
+
+        <mat-divider></mat-divider>
+      </mat-list>
+
+
+
+          </mat-tab>
+
+
+
+
+
+
+        <!--     <mat-tab label="Interventions" ></mat-tab> -->
+      </mat-tab-group>
+
+
+
+
+    </mat-card-content>
+    <mat-card-actions class="mb-5">
+      <!--  <a href="#" routerLink="/biens" class="mb-5 btn btn-primary ">Retour</a> -->
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+
+
+<ng-template #contentDelete let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Confirmation de la suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+    <div class=" text-center">
+      <button data-dismiss="modal" class="btn btn-danger col-2 m-auto   "  >Oui</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Annuler</button>
+  </div>
+</ng-template>
+
+
+<!--  -->
+

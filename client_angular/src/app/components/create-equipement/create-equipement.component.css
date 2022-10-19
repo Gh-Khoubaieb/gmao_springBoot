@@ -1,0 +1,111 @@
+p{
+
+  width: 250px;
+}
+
+.container{
+
+
+  flex-wrap: wrap ;
+  flex-direction: row;
+  display: flex;
+}
+
+.full-width-field{
+  width: 100%;
+}
+
+
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+mat-form-field {
+  margin-bottom: -0.75em;
+}
+::ng-deep .mat-form-field-wrapper{
+  margin-bottom: -1.25em;
+}
+
+.annuler{
+  height: 34.7px;
+  width: 118px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 12px 0px 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: rgb(255, 255, 255);
+  background-color: #233044;
+}
+
+.css-1m0olfb {
+  display: inline-flex;
+  height: 34.7px;
+  width: 118px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 12px 0px 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: rgb(255, 255, 255);
+  background-color: rgb(55, 111, 208);
+}
+#modal-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(1fr, 3);
+}
+#modal-title {
+  font-size: 22px;
+}
+#modal-footer {
+  justify-self: right;
+  align-self: center;
+}
+#modal-close-button {
+  background-color: #ce0909;
+}
+button + button {
+  margin-left: 8px;
+}

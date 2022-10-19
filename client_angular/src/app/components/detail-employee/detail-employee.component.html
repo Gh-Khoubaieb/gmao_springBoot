@@ -1,0 +1,447 @@
+<div class="col-lg-11 " style="margin-left: 45px">
+
+
+
+  <div class="mt-5" style="display: flex; justify-content: space-between; height: 35px">
+    <h4 class="p-0" style="font-weight: bold; font-size: 23px; font-family: Arial"> Détail de Employé  #{{employe.id}} </h4>
+
+    <div class="">
+      <mat-icon class="">arrow_back_ios</mat-icon>
+      <a href="#" routerLink="/employees" class="mb-2 btn ">
+
+        Retour</a>
+    </div>
+  </div>
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Employé  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Détail</p>
+
+  </div>
+  <mat-divider class="mb-4 " style="margin-top: 11px"></mat-divider>
+
+
+
+  <mat-card class="m-auto" >
+
+    <mat-card-subtitle></mat-card-subtitle>
+    <mat-card-content>
+      <mat-tab-group mat-align-tabs="start" class="mt-3">
+        <mat-tab label="Employé">
+
+
+      <mat-list >
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Nom:</strong>
+            <p click="col-md-4 ">{{ employe.nom }}</p>
+          </div>
+        </mat-list-item>
+
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="mt-3">
+
+
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2"  >Prénom :</strong>
+            <p click="col-md-4 " >{{ employe.prenom }}</p>
+          </div>
+
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">CIN :</strong>
+            <p click="col-md-4 ">{{ employe.cin }}</p>
+          </div>
+        </mat-list-item>
+
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Adresse:</strong>
+            <p click="col-md-4 ">{{ employe.adresse }}</p>
+          </div>
+        </mat-list-item>
+
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <div class="col-lg-12 col-md-10" style=" display: flex">
+          <strong class="col-md-2">Email:</strong>
+          <p click="col-md-4 ">{{ employe.email }}</p>
+        </div>
+      </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Telephone:</strong>
+            <p click="col-md-4 ">{{ employe.telephone }}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Label:</strong>
+            <p click="col-md-4 ">{{ employe.label }}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <!--
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Equipements:</strong>
+            <p click="col-md-4 ">{{ equipment.length }}</p>
+          </div>
+        </mat-list-item>
+-->
+        <mat-divider></mat-divider>
+      </mat-list>
+
+
+
+          </mat-tab>
+
+
+
+
+
+          <!--
+             <mat-tab label="Emplacement" >
+          <mat-list *ngFor="let equip of equipment"  class="col-lg-12" style="display: flex">
+            <a  routerLinkActive="active" [routerLink]="['update-bien/', bien.id]"  class="m-2 col-lg-1" >
+
+              <mat-icon aria-hidden="false"   aria-label="Example add icon"  color="primary">edit</mat-icon>
+
+            </a>
+            <div class="col-lg-8">
+              <mat-list-item  >
+
+
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2"  >Nom :</strong>
+                  <p click="col-md-4 " >{{ equip.nom }}</p>
+                </div>
+
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-4">Code Equipement :</strong>
+                  <p click="col-md-4 ">{{ equip.codeEquipement }}</p>
+                </div>
+              </mat-list-item>
+
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Type :</strong>
+                  <p click="col-md-4 ">{{ equip.type }}</p>
+                </div>
+              </mat-list-item>
+
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Statut:</strong>
+                  <p click="col-md-4 ">{{ equip.statut }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Classe :</strong>
+                  <p click="col-md-4 ">{{ equip.classe }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Bar Code:</strong>
+                  <p click="col-md-4 ">{{ equip.barCode }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Tag QR:</strong>
+                  <p click="col-md-4 ">{{ equip.tagQr }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Bar Code </strong>
+                  <p click="col-md-4 ">{{ equip.barCode }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">Criticité:</strong>
+                  <p click="col-md-4 ">{{ equip.criticite }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+              <mat-list-item>
+                <div class="col-lg-12 col-md-10" style=" display: flex">
+                  <strong class="col-md-2">N° de série :</strong>
+                  <p click="col-md-4 ">{{ equip.noSerie }}</p>
+                </div>
+              </mat-list-item>
+
+              <mat-divider></mat-divider>
+
+            </div>
+
+          </mat-list>
+          </mat-tab>
+-->
+
+
+        <mat-tab label="Intervention" >
+        </mat-tab>
+      </mat-tab-group>
+
+
+
+<!--
+      <table class="table">
+        <tr>
+          <th> UserId </th>
+          <td> {{bien.telephone}} </td>
+        </tr>
+        <tr>
+          <th> User Name </th>
+          <td> {{bien.type}} </td>
+        </tr>
+        <tr>
+          <th> EmailId </th>
+          <td> {{bien.region}} </td>
+        </tr>
+        <tr>
+          <th> Gender </th>
+          <td> {{bien.disponibilite}} </td>
+        </tr>
+        <tr>
+          <th> Address </th>
+          <td> {{bien.codePostal}} </td>
+        </tr>
+        <tr>
+          <th> MobileNo </th>
+          <td> {{bien.adresse}} </td>
+        </tr>
+        <tr>
+          <th> PinCode </th>
+          <td> {{bien.idBien}} </td>
+        </tr>
+      </table>
+-->
+    </mat-card-content>
+    <mat-card-actions class="mb-5">
+      <!--  <a href="#" routerLink="/biens" class="mb-5 btn btn-primary ">Retour</a> -->
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+
+
+<ng-template #contentDelete let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Confirmation de la suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+    <div class=" text-center">
+      <button data-dismiss="modal" class="btn btn-danger col-2 m-auto   "  >Oui</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Annuler</button>
+  </div>
+</ng-template>
+
+
+<!--
+<ng-template #contentCreate let-modal >
+
+  <div class="col-lg-11 " style="margin-left: 45px">
+    <div class="mt-5" style="display: flex; justify-content: space-between">
+      <h4 style="font-weight: bold; font-size: 23px; font-family: Arial"> Ajouter un Equipement </h4>
+
+    </div>
+
+    <div class="" style="display: flex">
+
+      <a class="text-decoration-none" href="/">Dashboard  </a>
+      <span class="mx-2 "> / </span>
+
+      <a class="text-decoration-none" style="" href="/">Equipement  </a>
+      <span class="mx-2 "> / </span>
+      <p class="">Ajouter</p>
+
+    </div>
+    <mat-divider class="mb-4 mt-3" ></mat-divider>
+
+    <form (ngSubmit)='onSubmit(equipementid)' [formGroup]='EQUIPEMENTForm' novalidate class="form">
+      <div class=" col-lg-12" >
+        <mat-card class="m-0 col-lg-12" >
+
+          <div class="">
+            <h4 class="m-auto p-auto" style="font-weight: bold">Ajouter un équipement   </h4>
+            <p style="width: 100%">      Merci de remplir les champs du formualire   </p>
+          </div>
+
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label> Code Equipement  </mat-label>
+            <input matInput placeholder="codeEquipement" id = "codeEquipement"
+                   formControlName='codeEquipement'   type="number" required >
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label> Statut  </mat-label>
+            <input matInput placeholder="statut" id = "statut"
+                   formControlName='statut' required >
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Criticité  </mat-label>
+            <input matInput placeholder="Criticité" id = "criticite"
+                   formControlName= "criticite" required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Tag Qr </mat-label>
+            <input matInput placeholder="Tag Qr" id = "tagQr"
+                   formControlName= "tagQr" required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Type" id = "type"
+                   formControlName= "type" required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Photo</mat-label>
+            <input matInput placeholder="Photo" id = "photo"
+                   formControlName= "photo"
+                   type="text"
+                   required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Doc Url</mat-label>
+            <input matInput placeholder="Doc Url" id = "docUrl"
+                   formControlName= "docUrl"
+                   type="text"
+                   required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>No° Serie</mat-label>
+            <input matInput placeholder="No° Serie" id = "noSerie"
+                   formControlName="noSerie"
+                   type="number"
+                   required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Classe</mat-label>
+            <input matInput placeholder="Classe" id = "classe"
+                   formControlName= "classe"
+                   type="text"
+                   required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Bar Code</mat-label>
+            <input matInput placeholder="Bar Code" id = "barCode"
+                   formControlName= "barCode"
+                   type="text"
+                   required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Nom</mat-label>
+            <input matInput placeholder="Nom" id = "nom"
+                   formControlName= "nom"
+                   type="text"
+                   required>
+
+          </mat-form-field>
+
+          <mat-dialog-actions align="start" class="col-lg-12 "  style="display: flex; justify-content: space-between">
+
+            <button class = "btn btn-primary css-1m0olfb " type ="submit" (click)="modal.close()" [disabled]='!EQUIPEMENTForm.valid'>Enregistrer</button>
+            <button type="button" class="btn annuler"  (click)="modal.close('Save click')">Annuler</button>
+          </mat-dialog-actions>
+        </mat-card>
+      </div>
+    </form>
+
+    <form (ngSubmit)='onSubmit(equipementid)' [formGroup]='EQUIPEMENTForm' novalidate class="form">
+      <input formControlName='nom' type="text" class="form-control" placeholder="nom" />
+      <div class="alert  alert-danger" >
+        Email is required
+      </div>
+
+    </form>
+
+
+  </div>
+
+</ng-template>
+-->

@@ -1,0 +1,45 @@
+p{
+
+  width: 250px;
+}
+
+.container{
+
+
+  flex-wrap: wrap ;
+  flex-direction: row;
+  display: flex;
+}
+
+.css-14ukpd{
+  margin: 0px 0px 0.35em;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.43;
+  width: 250px;
+}
+
+
+
+.full-width-field{
+  width: 100%;
+}
+.table2{
+  border: red 2px dot-dash;
+
+  width: 90%;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+mat-form-field {
+  margin-bottom: -0.75em;
+}
+::ng-deep .mat-form-field-wrapper{
+  margin-bottom: -1.25em;
+}

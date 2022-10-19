@@ -1,0 +1,143 @@
+
+<div class="ml-5 table2">
+  <div class="mt-3" style="display: flex; justify-content: space-between; height: 35px">
+<h4  class="p-0" style="font-weight: bold; font-size: 23px; font-family: Arial"> Mise à jour d'équipement </h4>
+
+</div>
+
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Equipement  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Update</p>
+
+  </div>
+  <mat-divider class="mb-4 mt-3 " style="margin-top: 11px"></mat-divider>
+
+  <form (ngSubmit) = "onSubmit()" class="example-form ">
+
+    <mat-card class="m-0 col-lg-12">
+      <div class="">
+      <h4 class="m-auto p-auto" style="font-weight: 450">Mise à jour de l'équipement N°: {{equipementUpdated? equipementUpdated.id : equipement.id}}</h4>
+      <p style="" class="css-14ukpd">Equipement {{equipementUpdated? equipementUpdated.nom: equipement.nom}}</p>
+    </div>
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label> Code Equipement  </mat-label>
+        <input matInput placeholder="Code Equipement" id = "codeEquipement"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.codeEquipement: equipement.codeEquipement" name = "codeEquipement" type="number" required >
+
+      </mat-form-field>
+
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label> Statut  </mat-label>
+        <input matInput placeholder="statut" id = "statut"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.statut : equipement.statut" name = "statut" required >
+
+      </mat-form-field>
+
+
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Criticité  </mat-label>
+        <input matInput placeholder="Criticité" id = "criticite"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.criticite : equipement.criticite" name = "criticite" required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Tag Qr </mat-label>
+        <input matInput placeholder="Tag Qr" id = "tagQr"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.tagQr : equipement.tagQr" name = "tagQr" required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Type</mat-label>
+        <input matInput placeholder="Type" id = "type"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.type: equipement.type" name = "type" required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Photo</mat-label>
+        <input matInput placeholder="Photo" id = "photo"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.photo : equipement.photo" name = "photo"
+               type="text"
+               required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Doc Url</mat-label>
+        <input matInput placeholder="Doc Url" id = "docUrl"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.docUrl : equipement.docUrl" name = "docUrl"
+               type="text"
+               required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>No° Serie</mat-label>
+        <input matInput placeholder="No° Serie" id = "noSerie"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.noSerie : equipement.noSerie" name = "noSerie"
+               type="number"
+               required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Classe</mat-label>
+        <input matInput placeholder="Classe" id = "classe"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.classe : equipement.classe" name = "classe"
+               type="text"
+               required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Bar Code</mat-label>
+        <input matInput placeholder="Bar Code" id = "barCode"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.barCode : equipement.barCode" name = "barCode"
+               type="text"
+               required>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="full-width-field">
+        <mat-label>Nom</mat-label>
+        <input matInput placeholder="Nom" id = "nom"
+               [(ngModel)] = "equipementUpdated? equipementUpdated.nom : equipement.nom" name = "nom"
+
+               required>
+
+      </mat-form-field>
+
+
+    <mat-dialog-actions align="start" class="col-lg-12 "  >
+
+      <button class = "btn btn-primary css-1m0olfb" type ="submit">Enregistrer</button>
+      <button mat-button mat-dialog-close class="css-1m0olfb" (click)="annuler()">
+        Annuler</button>
+
+    </mat-dialog-actions>
+
+    </mat-card>
+</form>
+</div>
+
+

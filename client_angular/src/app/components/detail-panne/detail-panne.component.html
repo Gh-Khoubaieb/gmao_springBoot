@@ -1,0 +1,405 @@
+<div class="col-lg-11 " style="margin-left: 45px">
+
+
+
+  <div class="mt-5" style="display: flex; justify-content: space-between; height: 35px">
+    <h4 class="p-0" style="font-weight: bold; font-size: 23px; font-family: Arial"> Détail de Panne  #{{panne.id}} </h4>
+
+    <div class="">
+      <mat-icon class="">arrow_back_ios</mat-icon>
+      <a href="#" routerLink="/pannes" class="mb-2 btn ">
+
+        Retour</a>
+    </div>
+  </div>
+  <div class="" style="display: flex">
+
+    <a class="text-decoration-none" href="/">Dashboard  </a>
+    <span class="mx-2 "> / </span>
+
+    <a class="text-decoration-none" style="" href="/">Panne  </a>
+    <span class="mx-2 "> / </span>
+    <p class="">Détail</p>
+
+  </div>
+  <mat-divider class="mb-4 " style="margin-top: 11px"></mat-divider>
+
+
+
+  <mat-card class="m-auto" >
+
+    <mat-card-subtitle></mat-card-subtitle>
+    <mat-card-content>
+      <mat-tab-group mat-align-tabs="start" class="mt-3">
+        <mat-tab label="Panne">
+
+
+      <mat-list >
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Code:</strong>
+            <p click="col-md-4 ">{{ panne.code }}</p>
+          </div>
+        </mat-list-item>
+
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="mt-3">
+
+
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2"  >description :</strong>
+            <p click="col-md-4 " >{{ panne.description }}</p>
+          </div>
+
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">priorite:</strong>
+            <p click="col-md-4 ">{{ panne.priorite }}</p>
+          </div>
+        </mat-list-item>
+
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">frequence:</strong>
+            <p click="col-md-4 ">{{ panne.frequence }}</p>
+          </div>
+        </mat-list-item>
+
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <div class="col-lg-12 col-md-10" style=" display: flex">
+          <strong class="col-md-2">heure:</strong>
+          <p click="col-md-4 ">{{ panne.heure }}</p>
+        </div>
+      </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Date:</strong>
+            <p click="col-md-4 ">{{ panne.date }}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Type:</strong>
+            <p click="col-md-4 ">{{ panne.type }}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          <div class="col-lg-12 col-md-10" style=" display: flex">
+            <strong class="col-md-2">Intervention:</strong>
+            <p click="col-md-4 ">{{ interventions.length }}</p>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+      </mat-list>
+
+
+
+          </mat-tab>
+
+
+        <mat-tab label="Interventions" >
+
+          <!--   <h1 class="col-lg-12   m-5" *ngIf="equipment.length === 0">Désolé il n'y a pas de données disponibles à afficher !!</h1>
+-->
+          <a  mat-icon-button routerLinkActive="active" class="nav-link  mt-2"   (click)="openCreate(contentCreate,panne.id ,true)"  >
+          <mat-icon aria-hidden="false" aria-label="Example add icon" class=" mb-1">add_circle</mat-icon>
+         Ajouter  Intervention
+        </a>
+
+
+          <table  mat-table [dataSource]="interventions" class="mat-elevation-z0  css-rimkgt">
+            <!-- codeIntervention Column -->
+            <ng-container matColumnDef="codeIntervention">
+              <th class="css-123ozm7"  mat-header-cell *matHeaderCellDef>Code Intervention</th>
+              <td mat-cell *matCellDef="let element">{{element.codeIntervention}}</td>
+            </ng-container>
+
+            <!-- type Column -->
+            <ng-container matColumnDef="type">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Type</th>
+              <td mat-cell *matCellDef="let element">{{element.type}}</td>
+            </ng-container>
+
+            <!-- Description Column -->
+            <ng-container matColumnDef="description">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Description </th>
+              <td mat-cell *matCellDef="let element">{{element.description}}</td>
+            </ng-container>
+
+            <!-- Priorite Column -->
+            <ng-container matColumnDef="priorite">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Priorite  </th>
+              <td mat-cell *matCellDef="let element">{{element.priorite}}</td>
+            </ng-container>
+
+            <!-- Date Column -->
+
+
+            <!-- TagQr Column
+                  <ng-container matColumnDef="TagQr">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Tag QR</th>
+              <td mat-cell *matCellDef="let element">{{element.TagQr}}</td>
+            </ng-container>
+            -->
+
+
+            <!-- barCode Column -->
+            <ng-container matColumnDef="heure">
+              <th  class="css-123ozm7" mat-header-cell *matHeaderCellDef>heure</th>
+              <td mat-cell *matCellDef="let element">{{element.heure}}</td>
+            </ng-container>
+
+            <!-- Statut Column -->
+            <ng-container matColumnDef="dateDeDebut">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Date De Debut</th>
+              <td mat-cell *matCellDef="let element">{{element.dateDeDebut | date}}</td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="dateDeFin">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Date De Fin</th>
+              <td mat-cell *matCellDef="let element">{{element.dateDeFin | date}}</td>
+            </ng-container>
+            <!-- Classe Column -->
+
+
+            <ng-container matColumnDef="statut">
+              <th  class="css-123ozm7" mat-header-cell *matHeaderCellDef>statut</th>
+              <td mat-cell *matCellDef="let element">{{element.statut}}</td>
+            </ng-container>
+
+
+            <!--
+                   <ng-container matColumnDef="interventions">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>interventions</th>
+              <td mat-cell *matCellDef="let element">{{interventions.length}}</td>
+            </ng-container>
+             -->
+
+
+
+
+
+            <!-- Action Column -->
+            <ng-container matColumnDef="action">
+              <th class="css-123ozm7" mat-header-cell *matHeaderCellDef>Action</th>
+              <td mat-cell *matCellDef="let element">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                <button mat-icon-button   >
+
+                  <mat-icon aria-hidden="false" (click)="openUpdateInter(contentCreate,panne.id, element.id,false, element)"  aria-label="Example add icon"  style="color: #606875">edit</mat-icon>
+
+                </button>
+
+                <button mat-icon-button  (click)="openDelete(contentDelete,element.id)"  >
+
+                  <mat-icon aria-hidden="false" aria-label="Example add icon"   style="color: #233044">delete</mat-icon>
+
+                </button>
+                  <a mat-icon-button routerLinkActive="active" [routerLink]="['detail-interventions/', element.id]" class="m-2 col-lg-3 col-md-3 col-sm-2" >
+
+                    <mat-icon aria-hidden="false"   aria-label="Example add icon"  style="color: #233044">remove_red_eye</mat-icon>
+
+                  </a>
+                  </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+
+
+
+        </mat-tab>
+
+
+        <!--     <mat-tab label="Interventions" ></mat-tab> -->
+      </mat-tab-group>
+
+
+
+
+    </mat-card-content>
+    <mat-card-actions class="mb-5">
+      <!--  <a href="#" routerLink="/biens" class="mb-5 btn btn-primary ">Retour</a> -->
+
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+
+
+<ng-template #contentDelete let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Confirmation de la suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>Voulez-vous vraiment supprimer cette ligne ?</h2>
+    <div class=" text-center">
+      <button data-dismiss="modal" class="btn btn-danger col-2 m-auto   "  (click)="deleteIntervention()">Oui</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Annuler</button>
+  </div>
+</ng-template>
+
+
+
+<ng-template #contentCreate let-modal >
+
+  <div class="col-lg-11 " style="margin-left: 45px">
+    <div class="mt-5" style="display: flex; justify-content: space-between">
+      <h4 style="font-weight: bold; font-size: 23px; font-family: Arial"> Ajouter un Intervention </h4>
+
+    </div>
+
+    <div class="" style="display: flex">
+
+      <a class="text-decoration-none" href="/">Dashboard  </a>
+      <span class="mx-2 "> / </span>
+
+      <a class="text-decoration-none" style="" href="/">Intervention  </a>
+      <span class="mx-2 "> / </span>
+      <p class="">Ajouter</p>
+
+    </div>
+    <mat-divider class="mb-4 mt-3" ></mat-divider>
+
+    <form (ngSubmit)='onSubmit(interventiontId)' [formGroup]='InterventionForm' novalidate class="form">
+      <div class=" col-lg-12" >
+        <mat-card class="m-0 col-lg-12" >
+
+          <div class="">
+            <h4 class="m-auto p-auto" style="font-weight: bold">Ajouter une intervention   </h4>
+            <p style="width: 100%">      Merci de remplir les champs du formualire   </p>
+          </div>
+
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label> Code Intervention  </mat-label>
+            <input matInput placeholder="Code Intervention" id = "codeIntervention"
+                   formControlName='codeIntervention'   type="text" required >
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label> Description  </mat-label>
+            <input matInput placeholder="Description" id = "description"
+                   formControlName='description' required >
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Priorité  </mat-label>
+            <input matInput placeholder="Priorité" id = "priorite"
+                   formControlName= "priorite" required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Statut </mat-label>
+            <input matInput placeholder="Statut" id = "statut"
+                   formControlName= "statut" required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Type" id = "type"
+                   formControlName= "type" required>
+
+          </mat-form-field>
+
+          <!--
+                <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Date</mat-label>
+            <input matInput placeholder="Date" id = "date"
+                   formControlName= "date"
+                   type="date"
+                   required>
+
+          </mat-form-field>
+           -->
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Date De Debut</mat-label>
+            <input matInput placeholder="Date De Debut" id = "DateDeDebut"
+                   formControlName= "dateDeDebut"
+                   type="date"
+                   required>
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Date De Fin</mat-label>
+            <input matInput placeholder="Date De Fin " id = "DateDeFin"
+                   formControlName="dateDeFin"
+                   type="date"
+                   required>
+
+          </mat-form-field>
+
+
+
+          <mat-form-field appearance="outline" class="col-lg-12">
+            <mat-label>Heure</mat-label>
+            <input matInput placeholder="Heure" id = "heure"
+                   formControlName= "heure"
+                   type="time"
+                   required>
+
+          </mat-form-field>
+
+
+
+          <mat-dialog-actions align="start" class="col-lg-12 "  >
+
+            <button class = "btn btn-primary css-1m0olfb " type ="submit" (click)="modal.close()" [disabled]='!InterventionForm.valid'>Enregistrer</button>
+            <button type="button" mat-button mat-dialog-close  class=" css-1m0olfb"  (click)="modal.close('Save click')">Annuler</button>
+          </mat-dialog-actions>
+        </mat-card>
+      </div>
+    </form>
+   <!--
+    <form (ngSubmit)='onSubmit(equipementid)' [formGroup]='EQUIPEMENTForm' novalidate class="form">
+      <input formControlName='nom' type="text" class="form-control" placeholder="nom" />
+      <div class="alert  alert-danger" >
+        Email is required
+      </div>
+
+    </form>
+-->
+
+  </div>
+
+</ng-template>
